@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return StreamProvider<UserModel>.value(
       value: AuthMethods().user,
+      initialData: null,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
