@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../screens/login.dart';
-import '../screens/signup.dart';
+import '../screens/AuthenticationPages/login.dart';
+import '../screens/AuthenticationPages/signupfiles/signup.dart';
 
 class Authenticate extends StatefulWidget {
   const Authenticate({Key key}) : super(key: key);
@@ -10,18 +10,18 @@ class Authenticate extends StatefulWidget {
 }
 
 class _AuthenticateState extends State<Authenticate> {
-
   bool showSignIn = true;
-  void toggleView(){
+  void toggleView() {
     setState(() {
       showSignIn = !showSignIn;
     });
   }
+
   @override
   Widget build(BuildContext context) {
-    if(showSignIn){
+    if (showSignIn) {
       return LogIn(toggleView: toggleView);
-    }else{
+    } else {
       return SignUp(toggleView: toggleView);
     }
   }

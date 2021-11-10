@@ -1,6 +1,8 @@
+import 'package:final_bf/screens/AuthenticationPages/login.dart';
+import 'package:final_bf/screens/nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:final_bf/models/user.dart';
-import 'package:final_bf/screens/home.dart';
+import 'package:final_bf/screens/FeedPage/feed.dart';
 import 'package:provider/provider.dart';
 import 'authenticate.dart';
 
@@ -9,7 +11,6 @@ class Wrapper extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final userp = Provider.of<UserModel>(context);
     //print(userp);
 
@@ -17,7 +18,7 @@ class Wrapper extends StatelessWidget {
     if (userp == null) {
       return Authenticate();
     } else {
-      return Home();
+      return BottomNavBar();
     }
   }
 }

@@ -25,3 +25,27 @@ TextStyle simpleTextStyle() {
 TextStyle biggerTextStyle() {
   return TextStyle(color: Colors.white, fontSize: 17);
 }
+
+Widget buildEditiIcon(Color color) => buildCircle(
+  color: Colors.white,
+  all:3,
+  child:   buildCircle(
+      color: color,
+      all: 8,
+      child: Icon(
+        Icons.edit,
+        size: 30,
+        color: Colors.white,
+      ),
+  ),
+);
+
+Widget buildCircle({Color color, double all, Widget child}){
+  return ClipOval(
+    child: Container(
+      color: color,
+      padding: EdgeInsets.all(all),
+      child: child,
+    ),
+  );
+}

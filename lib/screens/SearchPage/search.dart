@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:final_bf/screens/chat.dart';
+import 'package:final_bf/screens/ChatPages/chat.dart';
 import 'package:final_bf/services/auth.dart';
 import 'package:final_bf/services/database.dart';
 import 'package:final_bf/widgets/widgets.dart';
@@ -97,7 +97,7 @@ class _SearchScreenState extends State<SearchScreen> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top:20.0),
+            padding: const EdgeInsets.only(top:30.0),
             child: Container(
               padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
               child: Row(
