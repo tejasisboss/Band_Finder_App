@@ -94,47 +94,49 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-            child: Row(
-              children: [
-                Expanded(
-                    child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 20),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(50)
-                      ),
-                      child: TextField(
-                        controller: searchTextEditingController,
-                        decoration: InputDecoration(
-                          hintText: 'search with email',
-                          hintStyle: TextStyle(
-                            color: Colors.black45,
+          Padding(
+            padding: const EdgeInsets.only(top:20.0),
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+              child: Row(
+                children: [
+                  Expanded(
+                      child: Container(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(50)
+                        ),
+                        child: TextField(
+                          controller: searchTextEditingController,
+                          decoration: InputDecoration(
+                            hintText: 'search with email',
+                            hintStyle: TextStyle(
+                              color: Colors.black45,
+                            ),
+                            border: InputBorder.none,
                           ),
-                          border: InputBorder.none,
                         ),
                       ),
-                    ),
-                ),
-                SizedBox(width: 10,),
-                GestureDetector(
-                  onTap: (){
-                    initiateSearch();
-                    },
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: Color(0x54FFFFFF),
-                      borderRadius: BorderRadius.circular(50)
-                    ),
-                      child: Icon(Icons.search, color: Colors.white,),
                   ),
-                ),
-              ],
+                  SizedBox(width: 10,),
+                  GestureDetector(
+                    onTap: (){
+                      initiateSearch();
+                      },
+                    child: Container(
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Color(0x54FFFFFF),
+                        borderRadius: BorderRadius.circular(50)
+                      ),
+                        child: Icon(Icons.search, color: Colors.white,),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
           searchList(),
